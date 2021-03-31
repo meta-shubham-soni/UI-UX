@@ -1,0 +1,52 @@
+/* Generic Styles */
+.text_muted {
+    color: #6c757d!important;
+}
+
+.header_container{
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header_row{
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.header_col_logo{
+    text-align: center;
+}
+
+.header_col_btn{
+    text-align: right;
+    padding: 16px;
+}
+.txt_logo_header{
+    font-size: 2.25rem;
+}
+
+/* navbar */
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow:auto;
+}
+
+
+/* footer */
+
+.page_footer{
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+
+/* nav ottom buttons */
+
+.btn_round{
+    border-radius: 2rem;
+}
