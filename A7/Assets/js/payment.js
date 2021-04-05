@@ -22,22 +22,22 @@ class Payment{
     //@param - event
     //@param- currency symbol in unicode
     //@param - currencyValue with respect to INR
-    convertPricesTo(event,currency,currenyValue){
+    convertPricesTo(event,currency='\u{020B9}',currenyValue=1){
         var currentSelected = document.getElementsByClassName("selected")[0];
         if(event!=undefined && event.target!=currentSelected){
         currentSelected.classList.remove('selected');
         event.target.classList.add("selected");
         }
         let newPrices = {
-            "Cycle":
-                this.packages.Cycle
-            ,
-            "bike":
-                this.packages.bike
-            ,
-            "car":
-                this.packages.car
-            
+            "Cycle":{
+                ...this.packages.Cycle
+            },
+            "bike":{
+                ...this.packages.bike
+            },
+            "car":{
+                ...this.packages.car
+            }
         };
             newPrices.Cycle.daily = (this.packages.Cycle.daily*currenyValue).toFixed(1);
             newPrices.Cycle.Monthly = (this.packages.Cycle.Monthly*currenyValue).toFixed(1);
