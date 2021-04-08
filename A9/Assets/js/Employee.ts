@@ -65,9 +65,9 @@ class EmployeeDetails implements EmpInterface {
   };
 
   //It will handle the press events occuring while entering employee details
-  handlePress = (keyPress:Event, currentInputId: String, nextInputId: String) => {
-
-    if(keyPress.type != 'Enter' ) return;
+  handlePress = (keyPress:KeyboardEvent, currentInputId: String, nextInputId: String) => {
+    console.log(keyPress.key);
+    if(keyPress.key != 'Enter' ) return;
     let target: HTMLInputElement | null = document.getElementById(
       currentInputId.toString()
     ) as HTMLInputElement | null;

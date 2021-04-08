@@ -53,17 +53,17 @@ class Pass{
                 ...this.packages.car
             }
         };
-            newPrices.Cycle.daily = (Number.parseInt(this.packages.Cycle.daily)*currenyValue).toFixed(1);
-            newPrices.Cycle.Monthly = (Number.parseInt(this.packages.Cycle.Monthly)*currenyValue).toFixed(1);
-            newPrices.Cycle.yearly = (Number.parseInt(this.packages.Cycle.yearly)*currenyValue).toFixed(1);
+            newPrices.Cycle.daily = parseFloat((this.packages.Cycle.daily*currenyValue).toFixed(1));
+            newPrices.Cycle.Monthly = parseFloat((this.packages.Cycle.Monthly*currenyValue).toFixed(1));
+            newPrices.Cycle.yearly = parseFloat((this.packages.Cycle.yearly*currenyValue).toFixed(1));
 
-            newPrices.bike.daily = (Number.parseInt(this.packages.bike.daily)*currenyValue).toFixed(1);
-            newPrices.bike.Monthly = (Number.parseInt(this.packages.bike.Monthly)*currenyValue).toFixed(1);;
-            newPrices.bike.yearly = (Number.parseInt(this.packages.bike.yearly)*currenyValue).toFixed(1);
+            newPrices.bike.daily = parseFloat((this.packages.bike.daily*currenyValue).toFixed(1));
+            newPrices.bike.Monthly = parseFloat((this.packages.bike.Monthly*currenyValue).toFixed(1));
+            newPrices.bike.yearly = parseFloat((this.packages.bike.yearly*currenyValue).toFixed(1));
 
-            newPrices.car.daily = (Number.parseInt(this.packages.car.daily)*currenyValue).toFixed(1);
-            newPrices.car.Monthly = (Number.parseInt(this.packages.car.Monthly)*currenyValue).toFixed(1);
-            newPrices.car.yearly = (Number.parseInt(this.packages.car.yearly)*currenyValue).toFixed(1);
+            newPrices.car.daily =parseFloat((this.packages.car.daily*currenyValue).toFixed(1));
+            newPrices.car.Monthly = parseFloat((this.packages.car.Monthly*currenyValue).toFixed(1));
+            newPrices.car.yearly = parseFloat((this.packages.car.yearly*currenyValue).toFixed(1));
             
             this.updatePricesToDom(currency,newPrices);
     }
